@@ -1,0 +1,13 @@
+{
+  "name": "a",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "lint": "echo LINTING...",
+    "test": "echo TESTING...",
+    "build": "echo BUILDING...",
+    "deploy:prod": "echo DEPLOYING PROD...",
+    "deploy:dev": "echo DEPLOYING DEV..."
+  }
+}

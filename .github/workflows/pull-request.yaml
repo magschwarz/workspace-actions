@@ -1,0 +1,26 @@
+name: Pull Request
+
+on:
+  pull_request:
+
+  workflow_dispatch:
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Cloning project
+        uses: actions/checkout@v3
+
+      - name: Installing project dependencies
+        run: npm ci
+
+      - name: Linting project
+        run: npm run lint
+
+      - name: Testing project
+        run: npm run test
+
+      - name: Building project
+        run: npm run build
